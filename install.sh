@@ -1,7 +1,7 @@
 #!/bin/bash
 yum install vsftpd -y
-systemctl start vsftpd -y
-systemctl enable vsftpd -y
+systemctl start vsftpd
+systemctl enable vsftpd
 firewall-cmd --zone=public --permanent --add-port=21/tcp
 firewall-cmd --zone=public --permanent --add-service=ftp
 firewall-cmd --reload
